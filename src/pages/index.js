@@ -12,6 +12,7 @@ import Interests from "../components/sections/interests"
 import Projects from "../components/sections/projects"
 import Contact from "../components/sections/contact"
 import Education from "../components/sections/education"
+import Experience from "../components/sections/experience"
 import { seoTitleSuffix } from "../../config"
 
 const IndexPage = ({ data }) => {
@@ -42,6 +43,7 @@ const IndexPage = ({ data }) => {
         <About content={data.about.edges} />
         <Education content={data.education.edges} />
         <Interests content={data.interests.edges} />
+        <Experience content={data.experience.edges} />
         <Projects content={data.projects.edges} />
       </Layout>
     </GlobalStateProvider>
@@ -162,6 +164,18 @@ export const pageQuery = graphql`
     }
     education: allMdx(
       filter: { fileAbsolutePath: { regex: "/index/education/" } }
+    ) {
+      edges {
+        node {
+          body
+          frontmatter {
+            title
+          }
+        }
+      }
+    }
+    experience: allMdx(
+      filter: { fileAbsolutePath: { regex: "/index/experience/" } }
     ) {
       edges {
         node {
