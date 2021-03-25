@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 
 import { navLinks } from "../../config"
+import Switch from "./modeswitch"
 
 const StyledNav = styled.nav`
   display: none;
@@ -10,7 +11,7 @@ const StyledNav = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 31.25rem;
+    width: 35rem;
     background: ${({ theme }) => theme.colors.background};
     a {
       color: ${({ theme }) => theme.colors.primary};
@@ -78,6 +79,7 @@ const Navbar = () => {
           {button.name}
         </Link>
       )}
+      <Switch />
     </StyledNav>
   )
 }

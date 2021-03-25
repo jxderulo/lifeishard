@@ -10,6 +10,7 @@ import ContentWrapper from "../styles/contentWrapper"
 import Logo from "./logo"
 import Sidebar from "./sidebar"
 import Navbar from "./navbar"
+import Switch from "./modeswitch"
 
 const StyledHeader = motion.custom(styled.header`
   width: 100%;
@@ -29,6 +30,8 @@ const StyledContentWrapper = styled(ContentWrapper)`
 
 // https://css-tricks.com/hamburger-menu-with-a-side-of-react-hooks-and-styled-components/
 const StyledBurger = styled.button`
+  margin-left: auto;
+  margin-right: 1rem;
   z-index: 12;
   display: flex;
   flex-direction: column;
@@ -111,6 +114,7 @@ const Header = () => {
           <div />
         </StyledBurger>
         <Sidebar id="sidebar" open={open} setOpen={setOpen} />
+        <Switch />
       </>
     )
   } else {
