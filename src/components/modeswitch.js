@@ -25,8 +25,8 @@ const IconWrapper = styled.div`
 `
 
 const ModeSwitch = () => {
-  const { darkMode } = useContext(Context).state
   const { state, setState } = useContext(Context)
+  const darkMode = state.darkMode
 
   const handleChange = darkMode => {
     setState({ ...state, darkMode: !darkMode })
