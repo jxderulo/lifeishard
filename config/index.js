@@ -71,10 +71,10 @@ module.exports = {
       name: "Github",
       url: "https://github.com/jxderulo",
     },
-    // {
-    //   name: "Behance",
-    //   url: "",
-    // },
+    {
+      name: "Leetcode",
+      url: "https://leetcode.com/jxderulo/",
+    },
   ],
 
   //-- NAVIGATION SETTINGS -----

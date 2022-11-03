@@ -300,7 +300,7 @@ const Projects = ({ content }) => {
                         </Underlining>
                       ))}
                     </div>
-                    <div className="links">
+                    <div className="links" style={{ display: "none" }}>
                       {frontmatter.github && (
                         <a
                           href={frontmatter.github}
